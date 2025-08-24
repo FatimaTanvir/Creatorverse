@@ -1,5 +1,7 @@
 # WEB103 Prework - 💫 Creatorverse
 
+### Deployed here: https://dreamy-nougat-d22956.netlify.app/ 
+
 Submitted by: **Fatima Tanvir**
 
 About this web app: **Creatorverse is a beautiful React application for discovering and managing your favorite content creators. Share amazing creators you think are worth following and manage your collection with full CRUD operations. The app features a modern card-based UI with stunning animations, responsive design, and seamless navigation between viewing, adding, editing, and deleting creators.**
