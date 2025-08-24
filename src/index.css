@@ -1,0 +1,281 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base styles */
+body {
+  font-family: 'Inter', sans-serif;
+  background: #000; /* Black background */
+  color: #ffa500;   /* Orange text */
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Center header section */
+.header {
+  width: 100%;
+  text-align: center;
+  margin: 40px 0;
+}
+
+.header h1 {
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-shadow: 0 0 10px #ffa500, 0 0 20px #ff7b00;
+}
+
+.header p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+/* Buttons */
+.btn,
+.add-btn {
+  display: inline-block;
+  padding: 12px 24px;
+  margin: 15px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #000;
+  background: #ffa500;
+  transition: 0.3s ease-in-out;
+}
+
+.btn:hover,
+.add-btn:hover {
+  background: #ff7b00;
+  color: #fff;
+  box-shadow: 0 0 15px #ff7b00;
+}
+
+/* Creators grid */
+.creators-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 25px;
+  width: 100%;
+  max-width: 1200px;
+  margin-top: 30px;
+}
+
+/* Card */
+.creator-card {
+  background: #111;
+  border: 2px solid #ffa500;
+  border-radius: 12px;
+  padding: 25px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  overflow: hidden;
+}
+
+.creator-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 0 25px rgba(255, 165, 0, 0.6);
+}
+
+/* Images */
+.creator-image,
+.creator-image-large {
+  width: 120px;
+  height: 120px;
+  max-width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #ffa500;
+  box-shadow: 0 0 10px rgba(255, 165, 0, 0.5);
+  margin-bottom: 15px;
+}
+
+.creator-image-large {
+  width: 160px;
+  height: 160px;
+  margin-bottom: 30px;
+}
+
+/* Card text */
+.creator-name {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #ffa500;
+}
+
+.creator-description {
+  font-size: 1rem;
+  color: #ddd;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+/* Links */
+.creator-link,
+a {
+  color: #ffa500;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.creator-link:hover,
+a:hover {
+  color: #ff7b00;
+  text-shadow: 0 0 8px #ff7b00;
+}
+
+/* Form / Edit Card */
+.form-container,
+.creator-details {
+  background: #111;
+  border: 2px solid #ffa500;
+  border-radius: 12px;
+  padding: 30px;
+  max-width: 600px;
+  margin: 30px auto;
+  box-shadow: 0 0 20px rgba(255, 165, 0, 0.3);
+}
+
+.form-container h1 {
+  color: #ffa500;
+  margin-bottom: 20px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #ffa500;
+  border-radius: 8px;
+  background: #000;
+  color: #ffa500;
+  font-size: 1rem;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #ff7b00;
+  box-shadow: 0 0 10px #ff7b00;
+}
+
+/* Footer */
+.footer {
+  margin-top: 50px;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+/* Back link spacing */
+.back-link {
+  margin-top: 30px;
+  display: inline-block;
+}
+
+/* Creator description spacing in view page */
+.description {
+  margin-bottom: 30px;
+}
+
+/* Shooting Stars Animation */
+.shooting-stars {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.shooting-star {
+  position: absolute;
+  font-size: 1.5rem;
+  color: #ffa500;
+}
+
+.star-1 {
+  top: 15%;
+  left: -50px;
+  animation-delay: 0s;
+  animation-duration: 2.8s;
+  animation: shooting-star-move-1 2.8s linear infinite;
+}
+
+.star-2 {
+  top: 45%;
+  left: -50px;
+  animation-delay: 2.1s;
+  animation-duration: 3.7s;
+  animation: shooting-star-move-2 3.7s linear infinite;
+}
+
+
+
+.star-1 {
+  top: 15%;
+  left: -50px;
+  animation-delay: 0s;
+  animation-duration: 2.8s;
+}
+
+.star-2 {
+  top: 45%;
+  left: -50px;
+  animation-delay: 2.1s;
+  animation-duration: 3.7s;
+}
+
+.star-3 {
+  top: 75%;
+  left: -50px;
+  animation-delay: 4.3s;
+  animation-duration: 3.2s;
+}
+
+@keyframes shooting-star-move-1 {
+  0% {
+    transform: translateX(-50px) translateY(0) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(calc(100vw + 50px)) translateY(30px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes shooting-star-move-2 {
+  0% {
+    transform: translateX(-50px) translateY(0) rotate(0deg);
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(calc(100vw + 50px)) translateY(-25px) rotate(-180deg);
+    opacity: 0;
+  }
+}
+
+

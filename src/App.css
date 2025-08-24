@@ -1,0 +1,307 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base styles */
+body {
+  font-family: Arial, sans-serif;
+  background: #000; /* Black background */
+  color: #ffa500;   /* Orange text */
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Header */
+.header h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+
+.header p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+/* Buttons */
+.btn,
+.add-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #000;
+  background: #ffa500;
+  transition: 0.3s;
+}
+
+.btn:hover,
+.add-btn:hover {
+  background: #ff7b00;
+  color: #fff;
+}
+
+/* Card container */
+.creators-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  width: 100%;
+  max-width: 1000px;
+  margin-top: 30px;
+}
+
+/* Card */
+.creator-card {
+  background: #111;
+  border: 2px solid #ffa500;
+  border-radius: 10px;
+  padding: 20px;
+  transition: 0.3s;
+}
+
+.creator-card:hover {
+  background: #222;
+  transform: scale(1.03);
+}
+
+/* Card text */
+.creator-name {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Creator images */
+.creator-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 15px;
+  display: block;
+}
+
+.creator-description {
+  font-size: 1rem;
+  color: #ffa500;
+}
+
+/* Links */
+a {
+  color: #ffa500;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  color: #ff7b00;
+}
+
+/* Edit Creator Page */
+.edit-creator {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.form-container {
+  background: #111;
+  border: 2px solid #ffa500;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 8px 25px rgba(255, 165, 0, 0.2);
+}
+
+.form-container h1 {
+  color: #ffa500;
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.creator-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  color: #ffa500;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 12px 15px;
+  border: 2px solid #333;
+  border-radius: 8px;
+  background: #222;
+  color: #fff;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #ffa500;
+  box-shadow: 0 0 10px rgba(255, 165, 0, 0.3);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.form-actions {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 25px;
+}
+
+.form-actions .btn {
+  padding: 12px 25px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.form-actions .btn-primary {
+  background: #ffa500;
+  color: #000;
+  border: none;
+}
+
+.form-actions .btn-primary:hover {
+  background: #ff7b00;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.form-actions .btn-secondary {
+  background: #333;
+  color: #ffa500;
+  border: 2px solid #ffa500;
+}
+
+.form-actions .btn-secondary:hover {
+  background: #ffa500;
+  color: #000;
+  transform: translateY(-2px);
+}
+
+/* Stars Around Creator Name */
+.creator-name-container {
+  position: relative;
+  display: inline-block;
+}
+
+.stars-around-name {
+  position: absolute;
+  top: -20px;
+  left: -30px;
+  right: -30px;
+  bottom: -20px;
+  pointer-events: none;
+}
+
+.star {
+  position: absolute;
+  font-size: 1.5rem;
+  color: #ffa500;
+  animation: twinkle 3s infinite;
+  z-index: 2;
+}
+
+.star-1 {
+  top: 0;
+  left: 0;
+  animation-delay: 0s;
+}
+
+.star-2 {
+  top: 0;
+  right: 0;
+  animation-delay: 0.5s;
+}
+
+.star-3 {
+  bottom: 0;
+  left: 0;
+  animation-delay: 1s;
+}
+
+.star-4 {
+  bottom: 0;
+  right: 0;
+  animation-delay: 1.5s;
+}
+
+.star-5 {
+  top: 50%;
+  left: -15px;
+  animation-delay: 2s;
+}
+
+.star-6 {
+  top: 50%;
+  right: -15px;
+  animation-delay: 2.5s;
+}
+
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 0.2;
+    transform: scale(0.7) rotate(0deg);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.3) rotate(180deg);
+  }
+}
+
+.creator-header {
+  text-align: center;
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.creator-header h1 {
+  position: relative;
+  z-index: 2;
+}
+
+/* Footer */
+.footer {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
